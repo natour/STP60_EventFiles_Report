@@ -38,7 +38,7 @@ if uploaded_files:
                 if i == 9: meta["SWVersion"] = line.split("n:")[1].strip() if "n:" in line else ""
                 if i == 11: meta["Gridcode"] = line.split(":")[1].strip()
 
-            df = pd.read_csv(file, encoding='mbcs', skiprows=15)
+            df = pd.read_csv(file, encoding='utf-8', skiprows=15)
             df["EDate"] = pd.to_datetime(df["DateTime yyyy-MM-dd hh:mm:ss"])
             df = df[df["EDate"].dt.year > 2022]
             df = df.set_index("EDate").iloc[::-1]
