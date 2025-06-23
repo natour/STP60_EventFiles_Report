@@ -27,7 +27,7 @@ if uploaded_files:
 
     for file in uploaded_files:
         try:
-            text_io = file.getvalue().decode('mbcs').splitlines()
+            text_io = file.getvalue().decode('utf-8').splitlines()
             meta = { "serialNo": "", "name": "", "ComSW": "", "CtrlSW": "", "SWVersion": "", "PlantName": "", "Gridcode": "" }
             for i, line in enumerate(text_io[:14]):
                 if i == 1: meta["serialNo"] = line.split(":")[1].strip()
