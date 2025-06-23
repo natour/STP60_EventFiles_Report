@@ -7,7 +7,7 @@ import plotly.graph_objects as go
 import datetime
 
 st.set_page_config(layout="wide")
-st.title("Core2 Event Log Viewer with Summary Table, Date Filter, and PDF Export")
+st.title("STP60 Event Log Viewer with Summary Table, Date Filter, and PDF Export")
 
 uploaded_files = st.file_uploader("Upload Event*.csv files", type="csv", accept_multiple_files=True)
 
